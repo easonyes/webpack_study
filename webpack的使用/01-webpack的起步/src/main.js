@@ -10,3 +10,11 @@ require('./css/normal.css')
 require('./css/special.less')
 
 document.writeln('<h2>嘻嘻</h2>')
+import Vue from 'vue'
+
+new Vue({
+  el: '#app',
+  data: {
+    name: 'xxx'
+  }
+})
