@@ -1,12 +1,11 @@
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/main.js',
   output: {
     // 动态获取路径
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
   },
   module: {
@@ -62,9 +61,8 @@ module.exports = {
     }
   },
   plugins: [
-    new webpack.BannerPlugin('pk coding'),
     new HtmlWebpackPlugin({
       template: 'index.html'
-    })
+    }),
   ]
 }
